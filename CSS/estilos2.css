@@ -1,0 +1,189 @@
+*{
+    font-family: "Press Start 2P", cursive;
+    color: white;
+}
+body {
+    width: 99.4vw;
+    overflow: hidden;
+
+}
+
+/* jogo */
+#character{
+    display: block;
+    left: -100px;
+    top: 280px;
+    position: absolute;
+    z-index: 2;
+}
+
+#pointstwo {
+    display: none; /* alterar quando jogo começar */
+    float: left;
+    color: white;
+    position: absolute;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+#health {
+    display: none; /* alterar quando jogo começar */
+    position: absolute;
+    top: 30px;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+
+.clear {
+    clear: both;
+    visibility: hidden;
+}
+#pera1{
+    visibility: hidden;
+    top: 480px;
+    left: 150px;
+    position: absolute;
+    z-index: 2;;
+}
+#pera2{
+    visibility: hidden;
+    top: 580px;
+    left: 650px;
+    position: absolute;
+    z-index: 2;
+}
+#vida1{
+    visibility: hidden;
+    top: 90px;
+    left: 360px;
+    position: absolute;
+    z-index: 2;
+}
+#vida2{
+    visibility: hidden;
+    top: 90px;
+    left: 360px;
+    position: absolute;
+    z-index: 2;
+}
+#maca1{
+    visibility: hidden;
+    top: 90px;
+    left: 360px;
+    position: absolute;
+    z-index: 2;
+}
+#maca2{
+    visibility: hidden;
+    top: 180px;
+    left: 450px;
+    position: absolute;
+    z-index: 2;
+}
+#predador1{
+    display: none;
+    position: absolute;
+    z-index: 3;
+}
+#predador2{
+    display: none;
+    position: absolute;
+    z-index: 3;
+}
+#predador3{
+    display: none;
+    position: absolute;
+    z-index: 3;
+}
+#finalboss{
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+#femea{
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+#ataque{
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+#ataque1{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+/* fim jogo */
+
+/* zona de informação */
+#infor{
+    position: absolute;
+    z-index: 3;
+    display: none;
+    width: 99.5vw;
+    background-color: black;
+    color: white;
+    height: 157px;
+    left: 0;
+    top: 530px;
+    border-style: groove;
+    border-width: medium;
+    border-color: ghostwhite;
+}
+
+.textcaixas{
+    margin: 20px;
+
+}
+.skip{
+    position: absolute;
+    left: 95vw;
+    top: 95px;
+    border-style: groove;
+    border-width: medium;
+    border-color: ghostwhite;
+
+}
+/* fim zona informação */
+/* zona game over */
+#main2{
+    background-color: black;
+    width: 900px;
+    margin: 9% auto;
+    height: 400px;
+    border-style: groove;
+    border-width: medium;
+    border-color: ghostwhite;
+
+}
+#gameovertxt2{
+    font-weight: bolder;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 160px;
+}
+#main3{
+    background-color: black;
+    width: 900px;
+    margin: 9% auto;
+    height: 400px;
+    border-style: groove;
+    border-width: medium;
+    border-color: ghostwhite;
+
+}
+#gamewintxt{
+    font-weight: bolder;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 160px;
+}

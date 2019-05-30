@@ -11,9 +11,9 @@ var minhoca, minhocah = 18, minhocav = 81;
 var cogh = 34.25, cogv = 34.25;
 var madeirah = 90, madeirav = 35;
 var limiteCima = 110, limiteBaixo = 611, limiteEsquerda = 0, limiteDireita = 1285;
-var somFundo = new Audio ("../audio/8bit_theme1.wav");
-var somcomer = new Audio("../audio/escaravelho_comer.wav");
-var somCog = new Audio ("../audio/damage_bossfight.ogg");
+var somFundo = new Audio ("audio/8bit_theme1.wav");
+var somcomer = new Audio("audio/escaravelho_comer.wav");
+var somCog = new Audio ("audio/damage_bossfight.ogg");
 
 //Onload com funçao carregaElementos
 window.onload = function () {
@@ -59,7 +59,7 @@ function comecajogo() {
     pontos.style.display = "block";
     tempo.style.display = "block";
     background.style.backgroundColor = "#b9d2ff";
-    background.style.backgroundImage = "url(../Imagens/nivel1.png)";
+    background.style.backgroundImage = "url(Imagens/nivel1.png)";
     background.style.backgroundRepeat = "no-repeat";
     background.style.backgroundSize = "100%";
     //for com posicionamento dos elementos
@@ -67,13 +67,13 @@ function comecajogo() {
         //inserção madeiras podres
         console.log(i);
         document.getElementById("jogo").innerHTML +=
-            "<img id='madeira" + i + "' alt = 'madeira" + i + "' src='../Imagens/madeira_0.png'/>";
+            "<img id='madeira" + i + "' alt = 'madeira" + i + "' src='Imagens/madeira_0.png'/>";
             document.getElementById("madeira" + i).style.display = "block";
             document.getElementById("madeira" + i).style.position = "absolute";
 
         if (i == num) {
             //inserção personagem
-            document.getElementById("jogo").innerHTML += "<img id='personagem' src='../Imagens/larva-top.png'/>";
+            document.getElementById("jogo").innerHTML += "<img id='personagem' src='Imagens/larva-top.png'/>";
             minhoca = document.getElementById("personagem");
             minhoca.style.display = "block";
             minhoca.style.position = "absolute";
@@ -87,7 +87,7 @@ function comecajogo() {
                     
                     for (y = 1; y <= cog; y++){
                         //inserção cogumelos
-                        document.getElementById("jogo").innerHTML += "<img id='cog" + y + "' alt = 'cog" + y + "' src='../Imagens/cg3.png'/>";
+                        document.getElementById("jogo").innerHTML += "<img id='cog" + y + "' alt = 'cog" + y + "' src='Imagens/cg3.png'/>";
                         document.getElementById("cog" + y).style.display = "block";
                         document.getElementById("cog" + y).style.position = "absolute";
                         
@@ -118,7 +118,7 @@ function processaTeclasum(evt) {
     switch (tecla){
         case "ArrowUp":
             minhoca.style.top = parseInt(minhoca.style.top) - velocidade + "px";
-            minhoca.src ="../Imagens/larva-top.png";
+            minhoca.src ="Imagens/larva-top.png";
             console.log(minhoca.style.top);
             minhocah = 18;
             minhocav = 81;
@@ -127,7 +127,7 @@ function processaTeclasum(evt) {
         
         case "ArrowDown":
             minhoca.style.top = parseInt(minhoca.style.top) + velocidade + "px";
-            minhoca.src ="../Imagens/larva-bottom.png";
+            minhoca.src ="Imagens/larva-bottom.png";
             console.log(minhoca.style.top);
             minhocah = 18; // orientação da minhoca na vertical
             minhocav = 81;
@@ -136,7 +136,7 @@ function processaTeclasum(evt) {
         
         case "ArrowLeft":
             minhoca.style.left = parseInt(minhoca.style.left) - velocidade + "px";
-            minhoca.src ="../Imagens/larva-left.png";
+            minhoca.src ="Imagens/larva-left.png";
             console.log(minhoca.style.left);
             minhocah = 81; //orientação de minhoca da horizontal
             minhocav = 18;
@@ -148,7 +148,7 @@ function processaTeclasum(evt) {
         
         case "ArrowRight":
             minhoca.style.left = parseInt(minhoca.style.left) + velocidade + "px";
-            minhoca.src ="../Imagens/larva-right.png";
+            minhoca.src ="Imagens/larva-right.png";
             console.log(minhoca.style.left);
             minhocah = 81;
             minhocav = 18;
@@ -241,7 +241,7 @@ function comecaamima2(){
     pontos.style.display = "none";
     tempo.style.display = "none";
     background.style.backgroundColor = "#dcdede";
-    imgseq = document.getElementById("animeimg").src = "../Imagens/gif/larva.gif";
+    imgseq = document.getElementById("animeimg").src = "Imagens/gif/larva.gif";
     document.getElementById("animeimg").style.marginTop = 231 + "px";
     document.getElementById("animeimg").style.marginRight = "auto";
     document.getElementById("animeimg").style.marginBottom = 0 + "px";
@@ -260,7 +260,7 @@ function comecaamima2(){
 
 
 function proximonivel(){
-    window.open("../HTML/htmlprojpart2.html");
+    window.open("htmlprojpart2.html");
 }
 // final do primeiro nível
 

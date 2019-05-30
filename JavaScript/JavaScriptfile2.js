@@ -22,13 +22,13 @@ var tirochar;
 var tiroboss;
 var hpboss = 100;
 tiroposition = 0;
-var somFundo1 = new Audio ("../audio/8bit_theme2.wav");
-var somComer1= new Audio("../audio/escaravelho_comer.wav");
-var somFundo2 = new Audio("../audio/bossfight_2.wav");
-var somAtaque= new Audio("../audio/ataque_1.wav");
-var somLose = new Audio("../audio/loser.mp3");
-var somWin = new Audio("../audio/win_win.wav");
-var somDano = new Audio ("../audio/damage_bossfight.ogg");
+var somFundo1 = new Audio ("audio/8bit_theme2.wav");
+var somComer1= new Audio("audio/escaravelho_comer.wav");
+var somFundo2 = new Audio("audio/bossfight_2.wav");
+var somAtaque= new Audio("audio/ataque_1.wav");
+var somLose = new Audio("audio/loser.mp3");
+var somWin = new Audio("audio/win_win.wav");
+var somDano = new Audio ("audio/damage_bossfight.ogg");
 var contador = 0;
 
 
@@ -48,7 +48,7 @@ points = document.getElementById("pointstwo");
 background = document.getElementById("corpodois");
 background.style.backgroundPositionX = 0;
 background.style.backgroundColor = "#b9d2ff";
-background.style.backgroundImage = "url(../Imagens/nivel2.png)";
+background.style.backgroundImage = "url(Imagens/nivel2.png)";
 background.style.backgroundSize = "100%";
 background.style.backgroundRepeat = "repeat-x";
 info.style.display = "block";
@@ -109,7 +109,7 @@ function nextext(){
     health.style.display = "block";
     points.style.zIndex = 4;
     document.getElementById("jogodois").firstElementChild.innerHTML = "Pontos: " + getitem;
-    health.innerHTML = "<img id='health3' src='../Imagens/vidat2.png'/>";
+    health.innerHTML = "<img id='health3' src='Imagens/vidat2.png'/>";
     hpimg = document.getElementById("health3");
     health.style.zIndex = 5;
     character.style.left = 120 + "px";
@@ -178,13 +178,13 @@ function movepredadores() {
         bird1.style.left = window.innerWidth + 450 + "px";
         bird1.style.top = predadorreturn1 + "px";
         if (hpvalue == 2){
-            hpimg.src = "../Imagens/vidat3.png";
+            hpimg.src = "Imagens/vidat3.png";
         }
         if (hpvalue == 1){
-            hpimg.src = "../Imagens/vidat4.png";
+            hpimg.src = "Imagens/vidat4.png";
         }
         if (hpvalue == 0){
-            hpimg.src = "../Imagens/vidat5.png";
+            hpimg.src = "Imagens/vidat5.png";
             fimJogolose ();
             somLose.play();
 
@@ -198,13 +198,13 @@ function movepredadores() {
         bird2.style.left = window.innerWidth + 1450 + "px";
         bird2.style.top = predadorreturn2 + "px";
         if (hpvalue == 2){
-            hpimg.src = "../Imagens/vidat3.png";
+            hpimg.src = "Imagens/vidat3.png";
         }
         if (hpvalue == 1){
-            hpimg.src = "../Imagens/vidat4.png";
+            hpimg.src = "Imagens/vidat4.png";
         }
         if (hpvalue == 0){
-            hpimg.src = "../Imagens/vidat5.png";
+            hpimg.src = "Imagens/vidat5.png";
             fimJogolose ();
             somLose.play();
         }
@@ -216,13 +216,13 @@ function movepredadores() {
         bird3.style.left = window.innerWidth + 1750 + "px";
         bird3.style.top = predadorreturn2 + "px";
         if (hpvalue == 2){
-            hpimg.src = "../Imagens/vidat3.png";
+            hpimg.src = "Imagens/vidat3.png";
         }
         if (hpvalue == 1){
-            hpimg.src = "../Imagens/vidat4.png";
+            hpimg.src = "Imagens/vidat4.png";
         }
         if (hpvalue == 0){
-            hpimg.src = "../Imagens/vidat5.png";
+            hpimg.src = "Imagens/vidat5.png";
             fimJogolose ();
             somLose.play();
             
@@ -370,7 +370,7 @@ function ultimonivelanima(){
     if (parseInt(character.style.left) >= limitenivel){
         character.style.display = "block";
         character.style.left = -200 + "px";
-        background.style.backgroundImage = "url(../Imagens/nivel3.png)";
+        background.style.backgroundImage = "url(Imagens/nivel3.png)";
         background.style.backgroundSize = "100%";
         background.style.backgroundPositionX = 0;
         boss.style.display = "block";
@@ -378,7 +378,7 @@ function ultimonivelanima(){
     }
     character.style.left = 92 + "px";
     character.style.top = 342 + "px";
-    character.src = "../Imagens/escaravelho_ground.png";
+    character.src = "Imagens/escaravelho_ground.png";
     info.style.display = "block";
     txt1.innerHTML = "Os machos têm pinças para lutar entre si na presença de fêmeas. Normalmente encontram-se nos ramos " +
         "altos das arvores e o macho vencedor é aquele que no final da luta se mantiver no tronco.";
@@ -462,14 +462,14 @@ function bossattacks() {
         hpvalue--;
         tiroboss.style.display = "none";
         if (hpvalue == 2){
-            hpimg.src = "../Imagens/vidat3.png";
+            hpimg.src = "Imagens/vidat3.png";
         }
         if (hpvalue == 1){
-            hpimg.src = "../Imagens/vidat4.png";
+            hpimg.src = "Imagens/vidat4.png";
         }
         if (hpvalue == 0){
-            hpimg.src = "../Imagens/vidat5.png";
-            character.src = "../Imagens/escaravelho_dead .png";
+            hpimg.src = "Imagens/vidat5.png";
+            character.src = "Imagens/escaravelho_dead .png";
             clearInterval(bossattacking);
             fimJogolose ();
             somLose.play();
@@ -499,7 +499,7 @@ function movertiro(){
         if (hpboss == 0){
             clearInterval(bossattacking);
             clearInterval(bosstimer);
-            boss.src = "../Imagens/boss_dead.png";
+            boss.src = "Imagens/boss_dead.png";
             tiroboss.style.display = "none";
             tiroboss.style.top = 0 + "px";
             tirochar.style.display = "none";
@@ -516,9 +516,9 @@ function animacaofim(){
     contador++;
     boss.style.top = parseInt(boss.style.top) + velocidade + "px";
     character.style.left = parseInt(character.style.left) + velocidade - 1 +"px";
-    character.src = "../Imagens/gif/personagemfim.gif";
+    character.src = "Imagens/gif/personagemfim.gif";
     if (parseInt(character.style.left) >= 550){
-        character.src = "../Imagens/escaravelho_ground.png";
+        character.src = "Imagens/escaravelho_ground.png";
         clearInterval(endanimation);
         escaravelhodead = setInterval("contadois()", 100);
         info.style.display = "block";
@@ -534,7 +534,7 @@ function animacaofim(){
 function contadois(){
     contador++;
     if (contador == 100){
-        character.src = "../Imagens/escaravelho_dead .png";
+        character.src = "Imagens/escaravelho_dead .png";
         female.style.display = "none";
     }
 }
@@ -591,7 +591,7 @@ function fimJogowin(){
     background.innerHTML = "";
     background.style.backgroundColor = "#dcdede";
     background.style.backgroundImage = "";
-    character.src = "../Imagens/escaravelho_dead .png";
+    character.src = "Imagens/escaravelho_dead .png";
     background.innerHTML = "<div class='menu' id='main3'>" + "<div class='menutitle' id='gamewintxt'>YOU WIN</div>";
     localStorage.clear();
 }
